@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/feather/feather.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/ti-icons/css/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/css/vendor.bundle.base.css') }}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/ti-icons/css/themify-icons.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/js/select.dataTables.min.css') }}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/css/vertical-layout-light/style.css') }}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{{ url_for('static',filename='styles/images/favicon.png') }}" />
+</head>
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./presentation">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Présentation</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./liaison">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Liaison entre données</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./interpretation">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">interprétation</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./prediction">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Faire une prédiction</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0">à titre indicatif</p>
+                  <div class="table-responsive">
+                    <br />
+                    Je vous invite à ouvrir ce noteBook qui explique mes interpretations, d'une facon plus détaillé. 
+                    <a href="{{ url_for('static',filename='jupyter/main-checkpoint.ipynb') }}" download>
+                      cliquez ici 
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="{{ url_for('static',filename='styles/vendors/js/vendor.bundle.base.js') }}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="{{ url_for('static',filename='styles/vendors/chart.js/Chart.min.js') }}"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="{{ url_for('static',filename='styles/js/off-canvas.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/hoverable-collapse.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/template.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/settings.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/todolist.js') }}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{{ url_for('static',filename='styles/js/dashboard.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/Chart.roundedBarCharts.js') }}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+

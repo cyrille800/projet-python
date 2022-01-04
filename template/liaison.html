@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/feather/feather.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/ti-icons/css/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/css/vendor.bundle.base.css') }}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/vendors/ti-icons/css/themify-icons.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/js/select.dataTables.min.css') }}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/css/vertical-layout-light/style.css') }}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{{ url_for('static',filename='styles/images/favicon.png') }}" />
+</head>
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./presentation">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Présentation</span>
+            </a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="./liaison">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Liaison entre données</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./interpretation">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">interprétation</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./prediction">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Faire une prédiction</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h6 class="font-weight-normal mb-0 lead">Cette page donne une représentation des liens qui existent entre les variables, et ce qu'on peut en tirer .
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0">à titre indicatif</p>
+                  <div class="table-responsive">
+                    <br />
+                    Ce tableau de corrélations des variables va nous permettre de repérer les fortes correlations à fin de savoir s'il y a une possibilité d'utiliser ces correlations pour prédire des données manquantes.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-body">
+                  <p class="card-title">Tableau de correlation des données</p>
+                  <center>
+                    <img src="{{ url_for('static',filename='images/presentation/cor.png') }}" width="800"/>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card position-relative">
+                  <div class="card-body">
+                    <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
+                      <div class="carousel-inner">
+                        {% for dict_item in data %}
+                        <div class="carousel-item {% if (dict_item[0][0]=="ProductRelated_Duration" and dict_item[0][1]=="ExitRates") %} active {% endif %}">
+                          <div class="row">
+                            <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
+                              <div class="ml-xl-4 mt-3">
+                              <p class="card-title">Interpretation des variables {{dict_item[0][0]}} et {{dict_item[0][1]}}</p>
+                                <img width="450" src="{{ url_for('static',filename='images/presentation')}}{{ "/corlinear"+ dict_item[0][0] + dict_item[0][1] + ".png"}}"/>
+                              </div>  
+                              </div>
+                            <div class="col-md-12 col-xl-9">
+                              <div class="row">
+                                <div class="col-md-6 border-right">
+                                  <div class="table-responsive mb-3 mb-md-0 mt-3">
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mt-3"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                  <div id="north-america-legend">
+                                    <p class="lead">
+                                      {{dict_item[1]["message"]}}
+                                    </p>
+                                    <img width="450" src="{{ dict_item[1]['image'] }}"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      {% endfor %}
+                      </div>
+                      <a class="carousel-control-prev" href="#detailedReports" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#detailedReports" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="{{ url_for('static',filename='styles/vendors/js/vendor.bundle.base.js') }}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="{{ url_for('static',filename='styles/vendors/chart.js/Chart.min.js') }}"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="{{ url_for('static',filename='styles/js/off-canvas.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/hoverable-collapse.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/template.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/settings.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/todolist.js') }}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{{ url_for('static',filename='styles/js/dashboard.js') }}"></script>
+  <script src="{{ url_for('static',filename='styles/js/Chart.roundedBarCharts.js') }}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
