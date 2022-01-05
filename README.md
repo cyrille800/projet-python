@@ -70,4 +70,4 @@ Click below to check out the live demo.
 
 #### methode d'installation:
 
-je vous invite à executer la commande "pip install -r requirements.txt"
+je vous invite à executer la commande "pip install -r requirements.txt" qui permet d'installer les library, ensuite executer la commande "py codepython.py" pour executer le projet
