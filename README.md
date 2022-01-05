@@ -1,104 +1,73 @@
-# Skydash - Free Bootstrap Template
+# Guide de démarrage du projet - flask API
 
-Skydash is the latest Bootstrap admin template from BootstrapDash. This template has been meticulously crafted to ensure the best possible experience for developers and users alike. This admin template is super easy to set up, modify and use. The clean design minimizes clutter and improves the overall user experience. Skydash is packed with all the features that fit your needs but not cramped with components you would not even use. It is an excellent fit to build admin panels, e-commerce systems, project management systems, CMS or CRM. It comes with a clean and well-commented code that makes it easy to work with the template. Thus making it an ideal pick for jump-starting your project.
+après des analyses effectuées, la methode de selection des variables "anova" avec un k=12 ("nombre de variable choisi"), nous donne un score de 89.88 en utilisant un model de regression, maintenant Nous devons effectuer un cross validation pour nous assurer que la moyenne des scores ne s'éloigne de notre resultat de base (89.88).
 
-<h1>Demo</h1>
+<h1>Demo flask</h1>
 Click below to check out the live demo.
 
-[![N|Solid](preview.jpg)](https://bootstrapdash.com/demo/skydash-free/template/)
+[![N|Solid](flask_avatar.png)](https://d33wubrfki0l68.cloudfront.net/1b130d378d8c4dc38a39dd7dce1f25be8a368839/fa617/post/programming/)
 
 
-#### Credits:
+#### library flask:
 
-- Bootstrap 4
-  
-- Font Awesome
-  
-- jQuery
-  
-- Gulp
-  
-- Chart.js
-  
-- Google Maps
-  
-- Perfect Scrollbar
+    -   fonttools==4.28.5
+    -   gast==0.4.0
+    -   google-auth==2.3.3
+    -   google-auth-oauthlib==0.4.6
+    -   google-pasta==0.2.0
+    -   grpcio==1.43.0
+    -   h5py==3.6.0
+    -   idna==3.3
+    -   importlib-metadata==4.10.0
+    -   itsdangerous==2.0.1
+    -   ivis==2.0.6
+    -   Jinja2==3.0.3
+    -   joblib==1.1.0
+    -   keras==2.7.0
+    -   Keras-Preprocessing==1.1.2
+    -   kiwisolver==1.3.2
+    -   libclang==12.0.0
+    -   Markdown==3.3.6
+    -   MarkupSafe==2.0.1
+    -   matplotlib==3.5.1
+    -   numpy==1.21.5
+    -   oauthlib==3.1.1
+    -   opt-einsum==3.3.0
+    -   packaging==21.3
+    -   pandas==1.3.5
+    -   Pillow==8.4.0
+    -   plotly==5.5.0
+    -   protobuf==3.19.1
+    -   pyasn1==0.4.8
+    -   pyasn1-modules==0.2.8
+    -   pyparsing==3.0.6
+    -   python-dateutil==2.8.2
+    -   pytz==2021.3
+    -   requests==2.26.0
+    -   requests-oauthlib==1.3.0
+    -   rsa==4.8
+    -   scikit-learn==1.0.2
+    -   scipy==1.7.3
+    -   seaborn==0.11.2
+    -   six==1.16.0
+    -   sklearn==0.0
+    -   tenacity==8.0.1
+    -   tensorboard==2.7.0
+    -   tensorboard-data-server==0.6.1
+    -   tensorboard-plugin-wit==1.8.0
+    -   tensorflow==2.7.0
+    -   tensorflow-estimator==2.7.0
+    -   tensorflow-io-gcs-filesystem==0.23.1
+    -   termcolor==1.1.0
+    -   threadpoolctl==3.0.0
+    -   tqdm==4.62.3
+    -   typing_extensions==4.0.1
+    -   urllib3==1.26.7
+    -   Werkzeug==2.0.2
+    -   wrapt==1.13.3
+    -   xgboost==1.5.1
+    -   zipp==3.6.0
 
+#### methode d'installation:
 
-
-#### Browser Support:
-
-- Chrome (latest)
-  
-- FireFox (latest)
-  
-- Safari (latest)
-
-- Opera (latest)
-
-- IE10+
-
-
-#### License Information:
-
-Skydash is released under MIT license. Skydash is a free Bootstrap 4 admin template developed from BootstrapDash. Feel free to download it, use it, share it, get creative with it.
-
-#### How to use Skydash?
-
--Install node-gyp package. If you don’t know the installation steps, please click [here](https://github.com/nodejs/node-gyp)
-
-- Click the Clone or Download button in GitHub and download as a ZIP file or you can enter the command git clone https://github.com/BootstrapDash/skydash-free-bootstrap-admin-template.git in your terminal to get a copy of this template.
-  
--  After the files have been downloaded you will get a folder with all the required files
-
--   Open your terminal (Run as Administrator). You can install all the dependencies in the template by running the command npm install. All the required files are in the node modules. If you didn't run with admin authorities, you can see errors.
-  
-- Find the file named index.html, check what components you need. Open the file in a text editor and you can start editing.
-
--  Now that your project has now kick-started, all you need to do now is to code, code, and code to your heart's content.
-
-#### How to Contribute?:
-
-We love your contributions and we welcome them wholeheartedly. We believe the more the merrier. To contribute make sure you have Node.js and npm installed. Now run the command gulp --version. If the command returns with the Gulp version number, it means you have Gulp installed. If not you need to run the command npm install --global gulp-cli to install Gulp.
-
-
-#### Next
-
-After Gulp has been installed, follow the steps below to contribute.
-
-- Fork and clone the repo.
-  
-- Run the command npm install to install all the dependencies.
-  
-- Enter the command gulp serve. This will open Skydash in your default browser.
-  
-- Make your valuable contribution.
-  
-- Submit a pull request.
-
-
-### More from BootstrapDash
-Here are some of our most popular templates:
-
-- [StarAdmin Free Bootstrap Admin Template](https://github.com/BootstrapDash/StarAdmin-Free-Bootstrap-Admin-Template)
-- [PurpleAdmin Free Admin Template](https://github.com/BootstrapDash/PurpleAdmin-Free-Admin-Template)
-- [MajesticAdmin Free Bootstrap Admin Template](https://github.com/BootstrapDash/MajesticAdmin-Free-Bootstrap-Admin-Template)
-  
-### Like what you see?
-Please leave a star on our GitHub repo.
-Submit bugs and help us improve Corona Angular!
-Find us on 
-- [Twitter](https://twitter.com/bootstrapdash?lang=en), 
-- [Facebook](https://www.facebook.com/bootstrapdash/), 
-- [Instagram](https://www.instagram.com/bootstrapdash/?hl=en),
-- [Behance](https://www.behance.net/bootstrapdash),
-- [Pinterest](https://www.pinterest.com/bootstrapdash/),
-- [Dribbble](https://dribbble.com/bootstrapdash),
-- [LinkedIn](https://in.linkedin.com/in/bootstrapdash)
-
-
-#### Go Premium!!
-
-Do you need a template with more features and functionalities? Get more with our collection of premium templates with more plugins, eye-catching animations, UI components, and sample pages all fitting together with a high-quality design. Visit https://www.bootstrapdash.com for more admin templates.
-
-Check out the premium version of [Skydash Bootstrap admin template](https://www.bootstrapdash.com/product/skydash-admin-template/)
+je vous invite à executer la commande "pip install -r requirements.txt"
