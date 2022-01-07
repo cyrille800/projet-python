@@ -125,7 +125,7 @@
                     <div id="detailedReports" class="carousel slide detailed-report-carousel position-static pt-2" data-ride="carousel">
                       <div class="carousel-inner">
                         {% for dict_item in data %}
-                        <div class="carousel-item {% if (dict_item[0][0]=="ProductRelated_Duration" and dict_item[0][1]=="ExitRates") %} active {% endif %}">
+                        <div class="carousel-item {% if (dict_item[0][0]=="ProductRelated_Duration" and dict_item[0][1]=="ExitRates") or (dict_item[0][0]=="ExitRates" and dict_item[0][1]=="ProductRelated_Duration") %} active {% endif %}">
                           <div class="row">
                             <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                               <div class="ml-xl-4 mt-3">
