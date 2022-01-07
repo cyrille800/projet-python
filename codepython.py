@@ -251,6 +251,11 @@ def xgboost_method(x_test):
     # evaluate predictions
     return yhat
 ###########################
+@app.route("/")
+def index():
+    figcategorical.savefig('./static/images/presentation/categoricalSum.png', dpi=400)
+    figRevenu.savefig('./static/images/presentation/figRevenu.png')
+    return render_template("presentation.html", data = data_double)
 
 @app.route("/presentation")
 def presentation():
